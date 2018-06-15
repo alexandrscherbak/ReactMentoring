@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = function (env, options) {
 	const isProduction = options.mode === "production";
@@ -19,6 +20,10 @@ module.exports = function (env, options) {
 			filename: 'bundle.js'
 		},
 
+		devServer: {
+			contentBase: 'dist/',
+		},
+
 		module: {
 			rules: [
 				{
@@ -36,7 +41,11 @@ module.exports = function (env, options) {
 					test: /\.jsx?$/,
 					exclude: /node_modules/,
 					use: 'babel-loader'
-				}
+				},
+				{
+					test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+					loader: 'file-loader?name=images/[name].[ext]'
+				},
 			]
 		},
 		plugins: [
@@ -45,6 +54,7 @@ module.exports = function (env, options) {
 				inject: 'body',
 				title: 'ReactApp',
 			}),
+			new CopyWebpackPlugin([ { from: '../images' } ])
 		],
 	};
 

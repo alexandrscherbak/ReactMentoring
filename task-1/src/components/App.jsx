@@ -1,18 +1,32 @@
 import React from 'react';
-import Component from './Component.jsx';
-import CreateElement from './CreateElement.js';
-import Functional from './Functional.jsx';
-import PureComponent from './PureComponent.jsx';
+import {Provider} from 'react-redux';
+import {connect} from 'react-redux';
+import MoviesSearchApp from './MoviesSearchApp/MoviesSearchApp.jsx'
+import {createStore, applyMiddleware} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { createLogger } from 'redux-logger';
+import app from '../redux/reducers/app.reducer.js';
+
+const loggerMiddleware = createLogger();
+
+const store = createStore(
+	app,
+	applyMiddleware(
+		thunkMiddleware,
+		loggerMiddleware
+	)
+);
 
 export default class App extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
-			<React.Fragment>
-				<Component text='Component with props'/>
-				<CreateElement text='CreateElement with props'/>
-				<Functional text='Functional with props'/>
-				<PureComponent text='PureComponent with props'/>
-			</React.Fragment>
+			<Provider store={store}>
+				<MoviesSearchApp />
+			</Provider>
 		);
 	}
 }
