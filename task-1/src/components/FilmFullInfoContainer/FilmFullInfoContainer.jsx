@@ -42,7 +42,7 @@ export default class FilmFullInfoContainer extends React.Component {
 					{`
 						.film-full-info-container {
 							padding: 20px 100px;
-							background-image: url('headerBackground2.jpg');
+							background-image: url('../headerBackground2.jpg');
 						}
 						.film-image {
 							flex-basis: 300px;
