@@ -1,9 +1,11 @@
 import SearchByActions from '../actions/search-by.action.js';
 
-export default function searchBy(state = 'title', action) {
+const INITIAL_STATE = 'title';
+
+export default function searchBy(state = INITIAL_STATE, action) {
 	switch (action.type) {
 		case SearchByActions.SET_SEARCH_BY:
-			return action.payload;
+			return action.payload || INITIAL_STATE;
 		default:
 			return state;
 	}

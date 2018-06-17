@@ -25,12 +25,12 @@ export default class MoviesService {
 			if (limit) {
 				requestUrl += `&limit=${limit}`;
 			}
+			return fetch(encodeURI(requestUrl), {method: 'GET'})
+				.then(response => response.json())
+				.then(json => json.data);
+		} else {
+			return Promise.resolve([]);
 		}
-		return fetch(
-			encodeURI(requestUrl),
-			{method: 'GET'}
-		).then(response => response.json())
-		.then(json => json.data);
 	}
 	getMovieById(id) {
 		return fetch(

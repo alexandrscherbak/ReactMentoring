@@ -17,11 +17,13 @@ module.exports = function (env, options) {
 
 		output: {
 			path: path.resolve('dist'),
-			filename: 'bundle.js'
+			filename: 'bundle.js',
+			publicPath: '/',
 		},
 
 		devServer: {
 			contentBase: 'dist/',
+			historyApiFallback: true,
 		},
 
 		module: {
