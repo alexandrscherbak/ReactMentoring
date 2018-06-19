@@ -5,14 +5,6 @@ import FilmImage from '../FilmInfoContainer/FilmImage/FilmImage.jsx';
 export default class FilmFullInfoContainer extends React.Component {
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			filmInfo: props.filmInfo,
-		}
-	}
-
-	searchClicked() {
-		this.props.searchClicked();
 	}
 
 	render() {
@@ -21,20 +13,20 @@ export default class FilmFullInfoContainer extends React.Component {
 				<div className="film-full-info-header-row">
 					<Logo />
 					<button
-						onClick={() => this.searchClicked()}
+						onClick={() => this.props.searchClicked()}
 					>Search</button>
 				</div>
 				<div className="film-full-info">
 					<div className="film-image">
-						<img src={this.state.filmInfo.poster_path} alt={this.state.filmInfo.title} />
+						<img src={this.props.filmInfo.poster_path} alt={this.props.filmInfo.title} />
 					</div>
 					<div className="film-info">
-						<h1>{this.state.filmInfo.title}</h1>
+						<h1>{this.props.filmInfo.title}</h1>
 						<div className="release-and-rating">
-							<span>{this.state.filmInfo.release_date.slice(0, 4)}</span>
-							<span>{this.state.filmInfo.vote_average}</span>
+							<span>{this.props.filmInfo.release_date.slice(0, 4)}</span>
+							<span>{this.props.filmInfo.vote_average}</span>
 						</div>
-						<span>{this.state.filmInfo.overview}</span>
+						<span>{this.props.filmInfo.overview}</span>
 					</div>
 				</div>
 

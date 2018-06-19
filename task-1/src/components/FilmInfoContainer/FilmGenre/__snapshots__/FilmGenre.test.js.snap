@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmGenre snapshot 1`] = `
+<div
+  className="jsx-672986837"
+>
+  <span
+    className="jsx-672986837"
+  >
+    action
+  </span>
+</div>
+`;

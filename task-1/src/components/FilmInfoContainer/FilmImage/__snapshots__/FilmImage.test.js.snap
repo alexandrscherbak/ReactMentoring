@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmImage snapshot 1`] = `
+<img
+  alt="title"
+  className="jsx-2994430438"
+  src="imageUrl"
+/>
+`;

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPanel snapshot 1`] = `
+<div
+  className="jsx-1049508457 search-panel-container"
+>
+  <div
+    className="jsx-2852891300"
+  >
+    <span
+      className="jsx-2852891300"
+    >
+      netflixroulette
+    </span>
+  </div>
+  <div
+    className="jsx-1049508457 search-panel"
+  >
+    <h1
+      className="jsx-1049508457"
+    >
+      Find your movie
+    </h1>
+    <input
+      className="jsx-1049508457"
+      onChange={[Function]}
+      value="123"
+    />
+    <div
+      className="jsx-1049508457 search-buttons-container"
+    >
+      <div
+        className="jsx-1049508457 search-by-buttons-container"
+      >
+        <span
+          className="jsx-1049508457"
+        >
+          Search By
+        </span>
+        <button
+          className="jsx-1049508457 active-button"
+          onClick={[Function]}
+        >
+          Title
+        </button>
+        <button
+          className="jsx-1049508457 "
+          onClick={[Function]}
+        >
+          Genre
+        </button>
+      </div>
+      <div
+        className="jsx-1049508457"
+      >
+        <button
+          className="jsx-1049508457 search-button"
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

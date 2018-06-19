@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import SortByActions from '../../../redux/actions/sort-by.action.js';
 
-const _ResultsSort = ({sortBy, updateSortBy}) => (
+export const ResultsSort = ({sortBy, updateSortBy}) => (
 	<div>
 		<span>Sort by</span>
 		<button
@@ -24,7 +24,7 @@ const _ResultsSort = ({sortBy, updateSortBy}) => (
 	</div>
 );
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
 	return {
 		sortBy: state.sortBy,
 	};
@@ -36,9 +36,7 @@ const mapDispatchToProps = dispatch => {
 	};
 }
 
-const ResultsSort = connect(
+export default connect(
 	mapStateToProps,
 	mapDispatchToProps,
-)(_ResultsSort);
-
-export default ResultsSort;
+)(ResultsSort);

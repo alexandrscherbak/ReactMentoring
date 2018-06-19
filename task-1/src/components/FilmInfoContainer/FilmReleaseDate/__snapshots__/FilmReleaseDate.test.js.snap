@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmReleaseDate snapshot 1`] = `
+<div
+  className="jsx-617062702"
+>
+  <span
+    className="jsx-617062702"
+  >
+    2018
+  </span>
+</div>
+`;

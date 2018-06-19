@@ -18,7 +18,7 @@ const store = createStore(
 	)
 );
 
-class _MoviesSearchApp extends React.Component {
+export class MoviesSearchApp extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -34,6 +34,4 @@ class _MoviesSearchApp extends React.Component {
 	}
 }
 
-const MoviesSearchApp = withRouter(_MoviesSearchApp);
-
-export default MoviesSearchApp;
+export default withRouter(MoviesSearchApp);

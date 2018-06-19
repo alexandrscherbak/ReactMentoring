@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer snapshot 1`] = `
+<div
+  className="jsx-429413428"
+>
+  <div
+    className="jsx-2852891300"
+  >
+    <span
+      className="jsx-2852891300"
+    >
+      netflixroulette
+    </span>
+  </div>
+</div>
+`;

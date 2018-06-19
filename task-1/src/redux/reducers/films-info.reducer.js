@@ -7,7 +7,6 @@ export default function filmsInfo(state = [], action) {
 		case FilmsInfoActions.LOAD_FILMS_INFO_SUCCEEDED:
 			return action.payload;
 		case FilmsInfoActions.LOAD_FILMS_INFO_FAILED:
-			console.log(`error: ${action.payload}`);
 			return [];
 		default:
 			return state;

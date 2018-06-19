@@ -13,9 +13,7 @@ export default class MoviesService {
 			if (sortOrder) {
 				requestUrl += `&sortOrder=${sortOrder}`;
 			}
-			if (searchBy) {
-				requestUrl += `&searchBy=${searchBy}`;
-			}
+			requestUrl += `&searchBy=${searchBy}`;
 			if (filter) {
 				requestUrl += `&filter=${filter}`;
 			}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmTitle snapshot 1`] = `
+<div
+  className="jsx-433743616"
+>
+  <span
+    className="jsx-433743616"
+  >
+    title
+  </span>
+</div>
+`;

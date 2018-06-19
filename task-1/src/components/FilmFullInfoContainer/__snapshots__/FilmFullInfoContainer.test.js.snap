@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmFullInfoContainer snapshot 1`] = `
+<div
+  className="jsx-1209675933 film-full-info-container"
+>
+  <div
+    className="jsx-1209675933 film-full-info-header-row"
+  >
+    <div
+      className="jsx-2852891300"
+    >
+      <span
+        className="jsx-2852891300"
+      >
+        netflixroulette
+      </span>
+    </div>
+    <button
+      className="jsx-1209675933"
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+  <div
+    className="jsx-1209675933 film-full-info"
+  >
+    <div
+      className="jsx-1209675933 film-image"
+    >
+      <img
+        alt="film"
+        className="jsx-1209675933"
+        src="poster_path"
+      />
+    </div>
+    <div
+      className="jsx-1209675933 film-info"
+    >
+      <h1
+        className="jsx-1209675933"
+      >
+        film
+      </h1>
+      <div
+        className="jsx-1209675933 release-and-rating"
+      >
+        <span
+          className="jsx-1209675933"
+        >
+          2018
+        </span>
+        <span
+          className="jsx-1209675933"
+        >
+          7
+        </span>
+      </div>
+      <span
+        className="jsx-1209675933"
+      >
+        overview
+      </span>
+    </div>
+  </div>
+</div>
+`;

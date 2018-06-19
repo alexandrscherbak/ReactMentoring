@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsSort snapshot 1`] = `
+<div
+  className="jsx-2048650306"
+>
+  <span
+    className="jsx-2048650306"
+  >
+    Sort by
+  </span>
+  <button
+    className="jsx-2048650306 active-button"
+    onClick={[Function]}
+  >
+    release date
+  </button>
+  <button
+    className="jsx-2048650306 "
+    onClick={[Function]}
+  >
+    rating
+  </button>
+</div>
+`;

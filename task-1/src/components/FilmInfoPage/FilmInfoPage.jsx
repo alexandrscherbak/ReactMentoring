@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import SelectedFilmInfoActions from '../../redux/actions/selected-film-info.action.js';
 import { withRouter } from "react-router-dom";
 
-class _FilmInfoPage extends React.Component {
+export class FilmInfoPage extends React.Component {
 	componentDidMount() {
 		this.props.selectMovie(this.props.match.params.filmId);
 	}
@@ -65,9 +65,7 @@ const mapDispatchToProps = dispatch => {
 	};
 }
 
-const FilmInfoPage = withRouter(connect(
+export default withRouter(connect(
 	mapStateToProps,
 	mapDispatchToProps,
-)(_FilmInfoPage));
-
-export default FilmInfoPage;
+)(FilmInfoPage));

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import SearchValueActions from '../../redux/actions/search-value.action.js';
 import SearchByActions from '../../redux/actions/search-by.action.js';
 
-class _SearchPanel extends React.Component {
+export class SearchPanel extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -34,6 +34,7 @@ class _SearchPanel extends React.Component {
 						</div>
 						<div>
 							<button
+								className="search-button"
 								onClick={() => this.searchClicked()}
 							>Search</button>
 						</div>
@@ -72,7 +73,7 @@ class _SearchPanel extends React.Component {
 	}
 };
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
 	return {
 		searchValue: state.searchValue,
 		searchBy: state.searchBy,
@@ -86,9 +87,7 @@ const mapDispatchToProps = dispatch => {
 	};
 }
 
-const SearchPanel = connect(
+export default connect(
 	mapStateToProps,
 	mapDispatchToProps,
-)(_SearchPanel);
-
-export default SearchPanel;
+)(SearchPanel);

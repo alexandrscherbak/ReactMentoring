@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmsTable snapshot 1`] = `
+<div
+  className="jsx-1758079044 films-table"
+>
+  <div
+    className="jsx-2546762946 film-info-container"
+    onClick={[Function]}
+  >
+    <img
+      alt="film1"
+      className="jsx-2994430438"
+      src="poster_path1"
+    />
+    <div
+      className="jsx-2546762946 title-and-date"
+    >
+      <div
+        className="jsx-433743616"
+      >
+        <span
+          className="jsx-433743616"
+        >
+          film1
+        </span>
+      </div>
+      <div
+        className="jsx-617062702"
+      >
+        <span
+          className="jsx-617062702"
+        >
+          2018
+        </span>
+      </div>
+    </div>
+    <div
+      className="jsx-672986837"
+    >
+      <span
+        className="jsx-672986837"
+      >
+        action
+      </span>
+    </div>
+  </div>
+  <div
+    className="jsx-2546762946 film-info-container"
+    onClick={[Function]}
+  >
+    <img
+      alt="film2"
+      className="jsx-2994430438"
+      src="poster_path2"
+    />
+    <div
+      className="jsx-2546762946 title-and-date"
+    >
+      <div
+        className="jsx-433743616"
+      >
+        <span
+          className="jsx-433743616"
+        >
+          film2
+        </span>
+      </div>
+      <div
+        className="jsx-617062702"
+      >
+        <span
+          className="jsx-617062702"
+        >
+          2018
+        </span>
+      </div>
+    </div>
+    <div
+      className="jsx-672986837"
+    >
+      <span
+        className="jsx-672986837"
+      >
+        action
+      </span>
+    </div>
+  </div>
+</div>
+`;

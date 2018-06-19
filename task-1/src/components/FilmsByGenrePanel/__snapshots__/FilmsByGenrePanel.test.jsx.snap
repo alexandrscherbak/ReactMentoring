@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmsByGenrePanel snapshot 1`] = `
+<div
+  className="jsx-4002406560"
+>
+  <span
+    className="jsx-4002406560"
+  >
+    Films by 
+    action
+     genre
+  </span>
+</div>
+`;

@@ -11,7 +11,7 @@ import SortByActions from '../../redux/actions/sort-by.action.js';
 import SearchValueActions from '../../redux/actions/search-value.action.js';
 import SearchByActions from '../../redux/actions/search-by.action.js';
 
-class _MainPage extends React.Component {
+export class MainPage extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -74,7 +74,7 @@ class _MainPage extends React.Component {
 	}
 }
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
 	return {
 		searchValue: state.searchValue,
 		searchBy: state.searchBy,
@@ -92,9 +92,7 @@ const mapDispatchToProps = dispatch => {
 	};
 }
 
-const MainPage = withRouter(connect(
+export default withRouter(connect(
 	mapStateToProps,
 	mapDispatchToProps,
-)(_MainPage));
-
-export default MainPage;
+)(MainPage));
