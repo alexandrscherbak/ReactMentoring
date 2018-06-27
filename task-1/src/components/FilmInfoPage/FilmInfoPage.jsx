@@ -9,7 +9,7 @@ import SelectedFilmInfoActions from '../../redux/actions/selected-film-info.acti
 import { withRouter } from "react-router-dom";
 
 export class FilmInfoPage extends React.Component {
-	componentDidMount() {
+	componentWillMount() {
 		this.props.selectMovie(this.props.match.params.filmId);
 	}
 

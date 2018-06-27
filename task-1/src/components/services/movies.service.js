@@ -1,3 +1,5 @@
+import 'isomorphic-fetch';
+
 export default class MoviesService {
 	constructor() {
 		this.endPoint = 'http://react-cdp-api.herokuapp.com/movies';

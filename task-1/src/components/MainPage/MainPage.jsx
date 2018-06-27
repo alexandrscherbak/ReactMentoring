@@ -11,16 +11,36 @@ import SortByActions from '../../redux/actions/sort-by.action.js';
 import SearchValueActions from '../../redux/actions/search-value.action.js';
 import SearchByActions from '../../redux/actions/search-by.action.js';
 
+function parseQuery(queryString) {
+	var query = {};
+	var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+	for (var i = 0; i < pairs.length; i++) {
+		var pair = pairs[i].split('=');
+		query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+	}
+	return query;
+}
+
 export class MainPage extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
-	componentDidMount() {
-		const params = new URLSearchParams(this.props.location.search);
-		const search = params.get('search');
-		const searchBy = params.get('searchBy');
-		const sortBy = params.get('sortBy');
+	componentWillMount() {
+		let search;
+		let searchBy;
+		let sortBy;
+		if (!__SERVER__) {
+			const params = new URLSearchParams(this.props.location.search);
+			search = params.get('search');
+			searchBy = params.get('searchBy');
+			sortBy = params.get('sortBy');
+		} else {
+			const params = parseQuery(this.props.location.search);
+			search = params.search;
+			searchBy = params.searchBy;
+			sortBy = params.sortBy;
+		}
 
 		this.props.updateSearchValue(search);
 		this.props.updateSearchBy(searchBy);
