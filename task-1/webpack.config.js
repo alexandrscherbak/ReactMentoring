@@ -29,25 +29,10 @@ module.exports = function (env, options) {
 		module: {
 			rules: [
 				{
-					test: /\.css$/,
-					use: [
-						{ loader: 'style-loader' },
-						{ loader: 'css-loader' }
-					]
-				},
-				{
-					test: /\.js$/,
+					test: /\.(js|jsx)$/,
 					exclude: /node_modules/,
 					use: 'babel-loader'
-				}, {
-					test: /\.jsx?$/,
-					exclude: /node_modules/,
-					use: 'babel-loader'
-				},
-				{
-					test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-					loader: 'file-loader?name=images/[name].[ext]'
-				},
+				}
 			]
 		},
 		plugins: [
